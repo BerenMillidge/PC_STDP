@@ -34,8 +34,8 @@ plot(outs)
 series_pre = zeros(30)
 series_post = zeros(30)
 series_pre[10] = 1
-series_post[12] = 1
-pre = single_exp_kernel(series_pre, t_rise)
+series_post[20] = 1
+pre = single_exp_kernel(series_pre, 10) * 0.3
 post = single_exp_kernel(series_post, t_rise)
 plot(post .- pre)
 plot!(post)
