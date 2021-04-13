@@ -49,3 +49,10 @@ Us, output_spikes = LIF_neuron(input_spikes, weight,thresh,neg_boundary,pos_deca
 plot(Us)
 plot(Us .- 3)
 plot(output_spikes)
+
+# okay, let's get a proper graph for this
+output_idx = findmax(output_spikes)[2]
+xs = [(i+1) for i in -output_idx:49-output_idx]
+
+plot(xs, Us, xaxis="dt", yaxis="weight change",title="Membrane potential weight change",label="dw for given dt")
+savefig("membrane_potential")
