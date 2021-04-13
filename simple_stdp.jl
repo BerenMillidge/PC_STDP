@@ -16,5 +16,5 @@ end
 post_t = 25 # half way through
 xs = [i for i in -24:25]
 stdps = stdp_update.(xs, 1, 5)
-plot(xs, stdps)
+plot(xs, stdps,title="Classical STDP", xaxis="delta-t", yaxis="weight change")
 savefig("Prototypical_STDP")
